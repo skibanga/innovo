@@ -131,24 +131,6 @@
     ],
     "grid_page_length": 50,
     "index_web_pages_for_search": 1,
-    "indicators": [
-        {
-            "color": "red",
-            "condition": "priority == 'Super Important'"
-        },
-        {
-            "color": "orange",
-            "condition": "priority == 'Important'"
-        },
-        {
-            "color": "yellow",
-            "condition": "priority == 'Urgent'"
-        },
-        {
-            "color": "blue",
-            "condition": "priority == 'Less Urgent'"
-        }
-    ],
     "links": [],
     "modified": "2025-07-28 15:08:35.038414",
     "modified_by": "Administrator",
