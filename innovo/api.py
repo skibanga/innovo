@@ -145,3 +145,63 @@ def sync_project_tasks(project_name):
     except Exception as e:
         frappe.log_error(f"Error in sync_project_tasks: {str(e)}", "API Error")
         return {"success": False, "message": str(e)}
+
+
+@frappe.whitelist()
+def set_multiple_task_status(names, status):
+    """Set status for multiple tasks"""
+    try:
+        import json
+
+        if isinstance(names, str):
+            names = json.loads(names)
+
+        updated_count = 0
+        for name in names:
+            task = frappe.get_doc("Task", name)
+            task.status = status
+            task.save()
+            updated_count += 1
+
+        frappe.db.commit()
+
+        return {
+            "success": True,
+            "message": f"Updated {updated_count} task(s) to status '{status}'",
+        }
+
+    except Exception as e:
+        frappe.log_error(f"Error in set_multiple_task_status: {str(e)}", "API Error")
+        return {"success": False, "message": str(e)}
+
+
+@frappe.whitelist()
+def get_task_priority_stats():
+    """Get task statistics by priority"""
+    try:
+        priority_stats = frappe.db.sql(
+            """
+            SELECT
+                priority,
+                COUNT(*) as count,
+                SUM(CASE WHEN status = 'Completed' THEN 1 ELSE 0 END) as completed
+            FROM `tabTask`
+            WHERE task_for = 'Project'
+            GROUP BY priority
+            ORDER BY
+                CASE priority
+                    WHEN 'Super Important' THEN 1
+                    WHEN 'Important' THEN 2
+                    WHEN 'Urgent' THEN 3
+                    WHEN 'Less Urgent' THEN 4
+                    ELSE 5
+                END
+        """,
+            as_dict=True,
+        )
+
+        return {"success": True, "data": priority_stats}
+
+    except Exception as e:
+        frappe.log_error(f"Error in get_task_priority_stats: {str(e)}", "API Error")
+        return {"success": False, "message": str(e)}

@@ -12,20 +12,26 @@ frappe.ui.form.on("Project", {
             });
 
             frm.add_custom_button(__('Get Project Summary'), function () {
-                frm.call('get_project_summary').then(r => {
-                    if (r.message) {
-                        let summary = r.message;
-                        let msg = `
-							<h4>Project Summary</h4>
-							<p><strong>Status:</strong> ${summary.status}</p>
-							<p><strong>Progress:</strong> ${summary.progress_percentage.toFixed(1)}%</p>
-							<p><strong>Total Tasks:</strong> ${summary.total_tasks}</p>
-							<p><strong>Completed Tasks:</strong> ${summary.completed_tasks}</p>
-							<p><strong>Open Tasks:</strong> ${summary.open_tasks}</p>
-							<p><strong>Working Tasks:</strong> ${summary.working_tasks}</p>
-							<p><strong>Overdue Tasks:</strong> ${summary.overdue_tasks}</p>
-						`;
-                        frappe.msgprint(msg, __('Project Summary'));
+                // Use API call instead of doc method as fallback
+                frappe.call({
+                    method: 'innovo.api.get_project_tasks_summary',
+                    args: {
+                        project_name: frm.doc.name
+                    },
+                    callback: function (r) {
+                        if (r.message && !r.message.error) {
+                            let summary = r.message;
+                            let msg = `
+								<h4>Project Summary</h4>
+								<p><strong>Status:</strong> ${summary.project_status}</p>
+								<p><strong>Progress:</strong> ${summary.progress_rate.toFixed(1)}%</p>
+								<p><strong>Total Tasks:</strong> ${summary.total_tasks}</p>
+								<p><strong>Completed Tasks:</strong> ${summary.completed_tasks}</p>
+							`;
+                            frappe.msgprint(msg, __('Project Summary'));
+                        } else {
+                            frappe.msgprint(__('Error getting project summary'), __('Error'));
+                        }
                     }
                 });
             });

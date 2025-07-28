@@ -46,6 +46,17 @@ frappe.ui.form.on("Task", {
 
             frm.dashboard.add_indicator(__('Status: ') + frm.doc.status, color);
         }
+
+        // Add priority indicators
+        if (frm.doc.priority) {
+            let priority_color = 'blue';
+            if (frm.doc.priority === 'Super Important') priority_color = 'red';
+            else if (frm.doc.priority === 'Important') priority_color = 'orange';
+            else if (frm.doc.priority === 'Urgent') priority_color = 'yellow';
+            else if (frm.doc.priority === 'Less Urgent') priority_color = 'blue';
+
+            frm.dashboard.add_indicator(__('Priority: ') + frm.doc.priority, priority_color);
+        }
     },
 
     task_for(frm) {
