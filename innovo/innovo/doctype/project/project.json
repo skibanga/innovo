@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-21 11:41:23.702595",
+ "default_view": "List",
+ "description": "This holds the projects for the company.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "naming_series",
+  "project_title",
+  "category",
+  "status",
+  "progress_rate",
+  "column_break_jfmt",
+  "client",
+  "project_lead",
+  "lead_name",
+  "section_break_okiu",
+  "kickoff_date",
+  "actual_start_date",
+  "column_break_ctjj",
+  "due_date",
+  "completed_date",
+  "section_break_bcnr",
+  "project_team",
+  "section_break_nvvb",
+  "notes",
+  "project_task_tab",
+  "section_break_akdh",
+  "task"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "Import\nExport\nTendering\nSourcing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nProgress\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jfmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Lead",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bcnr",
+   "fieldtype": "Section Break",
+   "label": "Team Member"
+  },
+  {
+   "fieldname": "project_team",
+   "fieldtype": "Table",
+   "label": "Project Team",
+   "options": "Project Team"
+  },
+  {
+   "fieldname": "section_break_okiu",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "kickoff_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Kickoff Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ctjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "section_break_nvvb",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_akdh",
+   "fieldtype": "Section Break",
+   "label": "Task"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Table",
+   "label": "Task",
+   "options": "Task Details"
+  },
+  {
+   "fieldname": "project_task_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project Task"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PROJ-.####",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_lead.full_name",
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date"
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "progress_rate",
+   "fieldtype": "Percent",
+   "label": "% progress",
+   "precision": "2",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-28 13:56:14.495260",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Project",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "Progress"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  }
+ ],
+ "title_field": "project_title",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

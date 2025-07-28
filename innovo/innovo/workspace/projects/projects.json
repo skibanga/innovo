@@ -1,0 +1,169 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Vm0hOkZjfs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Projects</span>\",\"col\":12}},{\"id\":\"6jrjpIEvFh\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Project\",\"col\":4}},{\"id\":\"YvJTLx4qzo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Task\",\"col\":4}},{\"id\":\"VHDJIoJz9Z\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Important Strategic Goals\",\"col\":4}},{\"id\":\"E18k_AAzvO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Y2Ce8ZrbYh\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Tracker\",\"col\":4}},{\"id\":\"hc6JpLqVHi\",\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracker\",\"col\":4}},{\"id\":\"wxPvLXg3ny\",\"type\":\"card\",\"data\":{\"card_name\":\"Business Roadmap\",\"col\":4}},{\"id\":\"o3yBxvOdYk\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2025-07-21 12:24:21.925399",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "projects",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Projects",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Time Tracker",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timesheet",
+   "link_count": 0,
+   "link_to": "Timesheet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Tracker",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Projects",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Tasks",
+   "link_count": 0,
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Updates",
+   "link_count": 0,
+   "link_to": "Project Update",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Roadmap",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Department/ Division",
+   "link_count": 0,
+   "link_to": "Divisions",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Goals",
+   "link_count": 0,
+   "link_to": "Strategic Goal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Open Project available",
+   "link_count": 0,
+   "link_to": "Open Project Available",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "On Progress Project",
+   "link_count": 0,
+   "link_to": "On Progress Projects",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Completed Projects",
+   "link_count": 0,
+   "link_to": "Completed Project",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-07-28 13:15:54.364760",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Projects",
+ "number_cards": [
+  {
+   "label": "Open Task",
+   "number_card_name": "Open Task"
+  },
+  {
+   "label": "Important Strategic Goals",
+   "number_card_name": "Important Goal"
+  },
+  {
+   "label": "Open Project",
+   "number_card_name": "Open Available Projects"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Projects"
+}

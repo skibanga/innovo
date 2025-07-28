@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:goal_title",
+ "creation": "2025-07-21 13:05:35.001096",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "goal_overview_section",
+  "goal_title",
+  "business_unit",
+  "category",
+  "goal_owner",
+  "column_break_pyrk",
+  "priority",
+  "status",
+  "budget_allocation",
+  "section_break_vvnt",
+  "attachment",
+  "timelinw_section",
+  "start_date",
+  "column_break_sfcn",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "goal_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "business_unit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Business Unit",
+   "options": "Sale-SL\nOperation-OP\nProduct Development-PD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Company Growth\nBrand Awareness",
+   "reqd": 1
+  },
+  {
+   "fieldname": "goal_owner",
+   "fieldtype": "Link",
+   "label": "Goal Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pyrk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Important\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "default": "Initial Stage",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Initial Stage\nOn Progress\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Table",
+   "label": "Attachment",
+   "options": "Attachment Details"
+  },
+  {
+   "fieldname": "budget_allocation",
+   "fieldtype": "Float",
+   "label": "Budget Allocation"
+  },
+  {
+   "fieldname": "timelinw_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sfcn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vvnt",
+   "fieldtype": "Section Break",
+   "label": "Document Attachment"
+  },
+  {
+   "fieldname": "goal_overview_section",
+   "fieldtype": "Section Break",
+   "label": "Goal Overview"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-25 01:28:23.781389",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Strategic Goal",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Initial Stage"
+  },
+  {
+   "color": "Blue",
+   "title": "On Progress"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

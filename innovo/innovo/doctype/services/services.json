@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:service_code",
+ "creation": "2025-07-21 11:18:42.644462",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "service_code",
+  "service_name",
+  "default_uom",
+  "column_break_hyxt",
+  "standard_rate",
+  "selling_rate",
+  "is_active",
+  "details_section",
+  "service_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default UOM",
+   "options": "Unit of Measurement"
+  },
+  {
+   "fieldname": "column_break_hyxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Standard Rate"
+  },
+  {
+   "fieldname": "selling_rate",
+   "fieldtype": "Float",
+   "label": "Selling Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Text Editor",
+   "label": "Service Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-22 15:31:14.334346",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Services",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "service_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,315 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-21 07:42:32.056127",
+ "description": "This is the table to keep track on the leads.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "naming_series",
+  "salutation",
+  "first_name",
+  "last_name",
+  "full_name",
+  "column_break_onan",
+  "designation",
+  "gender",
+  "lead_source",
+  "status",
+  "middle_name",
+  "column_break_qtmw",
+  "lead_owner",
+  "date",
+  "lead_type",
+  "section_break_btot",
+  "lead_email",
+  "column_break_vnvt",
+  "lead_mobile",
+  "column_break_ndlf",
+  "lead_phone",
+  "section_break_kbif",
+  "company_name",
+  "email_address",
+  "lead_group",
+  "column_break_wspy",
+  "industry",
+  "mobile_no",
+  "column_break_faig",
+  "market_segment",
+  "phone_no",
+  "section_break_mzhj",
+  "city",
+  "column_break_ludb",
+  "country",
+  "column_break_lrzc",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CRM-LEAD-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Select",
+   "label": "Salutation",
+   "options": "Dr\nProf\nMadam\nMaster\nMiss\nMr\nMrs"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_onan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "lead_source",
+   "fieldtype": "Select",
+   "label": "Lead Source",
+   "options": "Advertising\nCampaign\nCold Calling\nExhibition\nMass Mailing\nReference"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Lead\nProspect\nCustomer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "column_break_qtmw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_type",
+   "fieldtype": "Select",
+   "label": "Lead Type",
+   "options": "Client\nChannel Partner\nConsultant"
+  },
+  {
+   "fieldname": "section_break_kbif",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "column_break_wspy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Industry",
+   "options": "Accounting\nAdvertising\nAerospace\nAgriculture\nAirline\nAutomotive\nBanking\nChemical\nComputer\nConsulting\nFood, Beverage & Tobacco\nEducation\nElectronics\nEnergy\nFinancial Services\nHealthcare\nLegal\nManufacturing\nReal Estate"
+  },
+  {
+   "fieldname": "column_break_faig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_segment",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Market Segment",
+   "options": "Lower Income\nMedium Income\nHigh Income"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "lead_owner",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Lead Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_btot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lead_email",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_vnvt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_mobile",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_ndlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_phone",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "section_break_mzhj",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City/ Region",
+   "options": "Region"
+  },
+  {
+   "fieldname": "column_break_ludb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "city.country",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_lrzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_group",
+   "fieldtype": "Select",
+   "label": "Lead Group",
+   "options": "Commercial\nGovernment\nUN Agencies"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-24 12:45:29.989849",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Lead",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "Lead"
+  },
+  {
+   "color": "Blue",
+   "title": "Prospect"
+  },
+  {
+   "color": "Green",
+   "title": "Customer"
+  }
+ ],
+ "title_field": "full_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

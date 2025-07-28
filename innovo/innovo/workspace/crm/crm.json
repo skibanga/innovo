@@ -1,0 +1,209 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"0bD_uMWl4r\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CRM</span>\",\"col\":12}},{\"id\":\"1spf0zUO1F\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Lead This Month\",\"col\":4}},{\"id\":\"n71QzOp_ZF\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prospect This Month\",\"col\":4}},{\"id\":\"R25H_jg-47\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"New Customer This Month\",\"col\":4}},{\"id\":\"2bT8lm67IU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mMo3CUgb9U\",\"type\":\"card\",\"data\":{\"card_name\":\"CRM Cycle\",\"col\":4}},{\"id\":\"ySR4lADIKB\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Cycle\",\"col\":4}},{\"id\":\"3dpptvm42C\",\"type\":\"card\",\"data\":{\"card_name\":\"What we Do\",\"col\":4}},{\"id\":\"Siw7gtcP58\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Tj7JPALLUr\",\"type\":\"card\",\"data\":{\"card_name\":\"SetUp\",\"col\":4}}]",
+ "creation": "2025-07-21 10:56:44.883493",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "assign",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CRM",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "What we Do",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Item List",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service List",
+   "link_count": 0,
+   "link_to": "Services",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Cycle",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Leads",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Prospect",
+   "link_count": 0,
+   "link_to": "Prospect",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Supplier",
+   "link_count": 0,
+   "link_to": "Suppliers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SetUp",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bank Details",
+   "link_count": 0,
+   "link_to": "Bank Details",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cities/ Region",
+   "link_count": 0,
+   "link_to": "Region",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Our Currencies",
+   "link_count": 0,
+   "link_to": "Currency",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UOM",
+   "link_count": 0,
+   "link_to": "Unit of Measurement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Cycle",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Quotation",
+   "link_count": 0,
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-07-22 13:19:45.315927",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "CRM",
+ "number_cards": [
+  {
+   "label": "New Customer This Month",
+   "number_card_name": "Customer This Month"
+  },
+  {
+   "label": "Lead This Month",
+   "number_card_name": "Lead This Month"
+  },
+  {
+   "label": "Prospect This Month",
+   "number_card_name": "Prospect"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "CRM"
+}

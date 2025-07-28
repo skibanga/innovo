@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-21 13:54:57.542331",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "porject_task_details_section",
+  "task",
+  "assigned_to",
+  "team_name",
+  "expected_to_start",
+  "expected_to_end",
+  "column_break_uxrx",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned To",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_to_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected to Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_to_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected to End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uxrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fetch_from": "assigned_to.full_name",
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Team Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "porject_task_details_section",
+   "fieldtype": "Section Break",
+   "label": "Porject task Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-28 12:15:47.449215",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Task Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
