@@ -101,53 +101,6 @@ def get_project_tasks_summary(project_name):
 
 
 @frappe.whitelist()
-def sync_project_tasks(project_name):
-    """Manually sync all project tasks between Task doctype and Project child table"""
-    try:
-        project_doc = frappe.get_doc("Project", project_name)
-
-        # Get all tasks for this project
-        project_tasks = frappe.get_all(
-            "Task",
-            filters={"project": project_name, "task_for": "Project"},
-            fields=[
-                "name",
-                "subject",
-                "expected_start_date",
-                "expected_end_date",
-                "task_description",
-            ],
-        )
-
-        # Clear existing child table
-        project_doc.task = []
-
-        # Add all tasks to child table
-        for task in project_tasks:
-            project_doc.append(
-                "task",
-                {
-                    "task": task.name,
-                    "assigned_to": frappe.session.user,
-                    "expected_to_start": task.expected_start_date,
-                    "expected_to_end": task.expected_end_date,
-                    "description": task.task_description or task.subject,
-                },
-            )
-
-        project_doc.save(ignore_permissions=True)
-
-        return {
-            "success": True,
-            "message": f"Synced {len(project_tasks)} tasks for project '{project_doc.project_title}'",
-        }
-
-    except Exception as e:
-        frappe.log_error(f"Error in sync_project_tasks: {str(e)}", "API Error")
-        return {"success": False, "message": str(e)}
-
-
-@frappe.whitelist()
 def set_multiple_task_status(names, status):
     """Set status for multiple tasks"""
     try:

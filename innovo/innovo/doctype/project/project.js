@@ -36,22 +36,6 @@ frappe.ui.form.on("Project", {
                 });
             });
 
-            frm.add_custom_button(__('Sync All Tasks'), function () {
-                frappe.call({
-                    method: 'innovo.api.sync_project_tasks',
-                    args: {
-                        project_name: frm.doc.name
-                    },
-                    callback: function (r) {
-                        if (r.message && r.message.success) {
-                            frappe.msgprint(r.message.message);
-                            frm.reload_doc();
-                        } else if (r.message && !r.message.success) {
-                            frappe.msgprint(r.message.message, __('Error'));
-                        }
-                    }
-                });
-            });
         }
 
         // Update progress indicator
