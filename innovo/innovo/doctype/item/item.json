@@ -35,9 +35,10 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "UOM",
+   "options": "Unit of Measurement",
    "reqd": 1
   },
   {
@@ -74,14 +75,14 @@
    "fieldname": "item_category",
    "fieldtype": "Select",
    "label": "Item Category",
-   "options": "Raw Material\nServices"
+   "options": "Agri-product\nInsurance\nMachinery\nRaw Material\nServices"
   }
  ],
  "grid_page_length": 50,
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-21 11:35:10.768641",
+ "modified": "2025-08-25 22:12:09.166900",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Item",

@@ -10,6 +10,7 @@
   "supplier_name",
   "supplier_type",
   "supplier_group",
+  "website",
   "column_break_qkap",
   "supplier_details",
   "supplier_category",
@@ -151,12 +152,17 @@
    "in_standard_filter": 1,
    "label": "Supplier Category",
    "options": "Import\nExport\nTendering\nSourcing\nInnovo insurance\nPrimeline Deals"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-25 14:08:07.421113",
+ "modified": "2025-08-25 17:30:14.604355",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Suppliers",
