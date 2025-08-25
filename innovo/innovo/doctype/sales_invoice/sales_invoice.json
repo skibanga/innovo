@@ -1,36 +1,49 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-07-22 12:20:34.070352",
+ "description": "This is the table that will handle the sales invoice for the company.",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "overview_section",
   "naming_series",
   "customer",
+  "customer_address",
+  "city",
+  "country",
   "column_break_hhxt",
   "date",
   "posting_time",
   "status",
   "column_break_bfti",
   "po_no",
-  "po_date",
+  "customer_email",
+  "customer_phone",
+  "tin_no",
+  "vrn",
   "section_break_vkon",
-  "item_details",
+  "product",
   "section_break_hsci",
   "total_quantity",
   "column_break_tned",
   "column_break_exmm",
   "total_amount",
+  "vat_amount",
+  "total",
   "section_break_bnir",
   "acc_no",
   "acc_name",
   "bank_name",
   "acc_currency",
+  "swiftcode",
   "column_break_aycc",
   "notes",
-  "amended_from"
+  "amended_from",
+  "section_break_noiw",
+  "validity_of_invoice",
+  "column_break_bnek",
+  "prepared_by"
  ],
  "fields": [
   {
@@ -38,6 +51,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Series",
+   "options": "SAL-INV-.YYYY.-",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -60,6 +75,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -91,20 +107,9 @@
    "label": "Customer Purchase Order"
   },
   {
-   "fieldname": "po_date",
-   "fieldtype": "Date",
-   "label": "Customer Purchase Order Date"
-  },
-  {
    "fieldname": "section_break_vkon",
    "fieldtype": "Section Break",
    "label": "Invoice Details"
-  },
-  {
-   "fieldname": "item_details",
-   "fieldtype": "Table",
-   "label": "Item Details",
-   "options": "Item Details Table"
   },
   {
    "fieldname": "section_break_hsci",
@@ -184,13 +189,100 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Item Details",
+   "options": "Item Details Table"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Float",
+   "label": "VAT Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "customer.address_line_1",
+   "fieldname": "customer_address",
+   "fieldtype": "Data",
+   "label": "Customer Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.region",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fetch_from": "customer.country",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fetch_from": "customer.email_address",
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.phone",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "acc_no.swift_code",
+   "fieldname": "swiftcode",
+   "fieldtype": "Data",
+   "label": "Swiftcode"
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tin_no",
+   "fieldtype": "Data",
+   "label": "TIN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vrn",
+   "fieldtype": "Data",
+   "label": "VRN"
+  },
+  {
+   "fieldname": "section_break_noiw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "validity_of_invoice",
+   "fieldtype": "Date",
+   "label": "Validity of Invoice"
+  },
+  {
+   "fieldname": "column_break_bnek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "label": "Prepared By"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-22 12:46:08.013994",
+ "modified": "2025-08-24 14:10:47.111301",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Sales Invoice",

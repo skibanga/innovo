@@ -1,187 +1,186 @@
 {
-    "actions": [],
-    "allow_rename": 1,
-    "autoname": "format:Task-{subject}",
-    "creation": "2025-07-21 11:51:03.745689",
-    "description": "This will keep track of all the task available.",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "overview_section",
-        "subject",
-        "task_for",
-        "strategic_goal",
-        "project",
-        "project_title",
-        "ia",
-        "column_break_clhz",
-        "status",
-        "priority",
-        "parent_task",
-        "section_break_rjuq",
-        "expected_start_date",
-        "column_break_cula",
-        "expected_end_date",
-        "section_break_xyba",
-        "task_description"
-    ],
-    "fields": [
-        {
-            "fieldname": "subject",
-            "fieldtype": "Data",
-            "in_standard_filter": 1,
-            "label": "Subject",
-            "reqd": 1
-        },
-        {
-            "depends_on": "eval:doc.task_for == \"Project\"",
-            "fieldname": "project",
-            "fieldtype": "Link",
-            "label": "Project",
-            "options": "Project",
-            "reqd": 1
-        },
-        {
-            "default": "0",
-            "fieldname": "ia",
-            "fieldtype": "Check",
-            "label": "Is Group"
-        },
-        {
-            "fieldname": "column_break_clhz",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "status",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "in_standard_filter": 1,
-            "label": "Status",
-            "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled"
-        },
-        {
-            "fieldname": "priority",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "label": "Priority",
-            "options": "Super Important\nImportant\nUrgent\nLess Urgent",
-            "reqd": 1
-        },
-        {
-            "fieldname": "parent_task",
-            "fieldtype": "Data",
-            "label": "Parent Task"
-        },
-        {
-            "fieldname": "section_break_rjuq",
-            "fieldtype": "Section Break",
-            "label": "Timeline"
-        },
-        {
-            "fieldname": "expected_start_date",
-            "fieldtype": "Date",
-            "label": "Expected Start Date"
-        },
-        {
-            "fieldname": "column_break_cula",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "expected_end_date",
-            "fieldtype": "Date",
-            "label": "Expected End Date"
-        },
-        {
-            "fieldname": "section_break_xyba",
-            "fieldtype": "Section Break",
-            "label": "Notes"
-        },
-        {
-            "fieldname": "task_description",
-            "fieldtype": "Small Text",
-            "label": "Task Description"
-        },
-        {
-            "fieldname": "overview_section",
-            "fieldtype": "Section Break",
-            "label": "Overview"
-        },
-        {
-            "fetch_from": "project.project_title",
-            "fieldname": "project_title",
-            "fieldtype": "Data",
-            "in_list_view": 1,
-            "label": "Project Title",
-            "read_only": 1
-        },
-        {
-            "fieldname": "task_for",
-            "fieldtype": "Select",
-            "label": "Task For",
-            "options": "Project\nStrategic Goal",
-            "reqd": 1
-        },
-        {
-            "depends_on": "eval:doc.task_for == \"Strategic Goal\"",
-            "fieldname": "strategic_goal",
-            "fieldtype": "Link",
-            "label": "Strategic Goal",
-            "options": "Strategic Goal"
-        }
-    ],
-    "grid_page_length": 50,
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2025-07-28 15:08:35.038414",
-    "modified_by": "Administrator",
-    "module": "Innovo",
-    "name": "Task",
-    "naming_rule": "Expression",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "row_format": "Dynamic",
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": [
-        {
-            "color": "Cyan",
-            "title": "Open"
-        },
-        {
-            "color": "Blue",
-            "title": "Working"
-        },
-        {
-            "color": "Orange",
-            "title": "Pending Review"
-        },
-        {
-            "color": "Red",
-            "title": "Overdue"
-        },
-        {
-            "color": "Green",
-            "title": "Completed"
-        },
-        {
-            "color": "Pink",
-            "title": "Cancelled"
-        }
-    ],
-    "track_changes": 1,
-    "track_seen": 1,
-    "track_views": 1
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Task-{subject}",
+ "creation": "2025-07-21 11:51:03.745689",
+ "description": "This will keep track of all the task available.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "subject",
+  "task_for",
+  "strategic_goal",
+  "project",
+  "project_title",
+  "ia",
+  "column_break_clhz",
+  "status",
+  "priority",
+  "parent_task",
+  "section_break_rjuq",
+  "expected_start_date",
+  "column_break_cula",
+  "expected_end_date",
+  "section_break_xyba",
+  "task_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.task_for == \"Project\"",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "default": "0",
+   "fieldname": "ia",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "column_break_clhz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Super Important\nImportant\nUrgent\nLess Urgent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_task",
+   "fieldtype": "Data",
+   "label": "Parent Task"
+  },
+  {
+   "fieldname": "section_break_rjuq",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "column_break_cula",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "section_break_xyba",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "label": "Task Description"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fetch_from": "project.project_title",
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_for",
+   "fieldtype": "Select",
+   "label": "Task For",
+   "options": "Project\nStrategic Goal",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.task_for == \"Strategic Goal\"",
+   "fieldname": "strategic_goal",
+   "fieldtype": "Link",
+   "label": "Strategic Goal",
+   "options": "Strategic Goal"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-22 10:04:17.910481",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Task",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Cyan",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "Working"
+  },
+  {
+   "color": "Orange",
+   "title": "Pending Review"
+  },
+  {
+   "color": "Red",
+   "title": "Overdue"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  },
+  {
+   "color": "Pink",
+   "title": "Cancelled"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2025-07-21 07:42:32.056127",
  "description": "This is the table to keep track on the leads.",
@@ -25,6 +25,7 @@
   "lead_type",
   "section_break_btot",
   "lead_email",
+  "website",
   "column_break_vnvt",
   "lead_mobile",
   "column_break_ndlf",
@@ -32,19 +33,20 @@
   "section_break_kbif",
   "company_name",
   "email_address",
+  "column_break_tchq",
   "lead_group",
-  "column_break_wspy",
+  "phone_no",
+  "column_break_vwlu",
   "industry",
   "mobile_no",
-  "column_break_faig",
-  "market_segment",
-  "phone_no",
   "section_break_mzhj",
   "city",
   "column_break_ludb",
   "country",
   "column_break_lrzc",
-  "address"
+  "address",
+  "notes_section",
+  "notes"
  ],
  "fields": [
   {
@@ -120,13 +122,16 @@
    "fieldname": "date",
    "fieldtype": "Datetime",
    "label": "Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "lead_type",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Lead Type",
-   "options": "Client\nChannel Partner\nConsultant"
+   "options": "Import\nExport\nTendering\nSourcing\nInnovo Insurance\nPrimeline Deals",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_kbif",
@@ -137,53 +142,38 @@
    "fieldname": "company_name",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "Company Name"
-  },
-  {
-   "fieldname": "column_break_wspy",
-   "fieldtype": "Column Break"
+   "label": "Company Name",
+   "reqd": 1
   },
   {
    "fieldname": "industry",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Industry",
-   "options": "Accounting\nAdvertising\nAerospace\nAgriculture\nAirline\nAutomotive\nBanking\nChemical\nComputer\nConsulting\nFood, Beverage & Tobacco\nEducation\nElectronics\nEnergy\nFinancial Services\nHealthcare\nLegal\nManufacturing\nReal Estate"
-  },
-  {
-   "fieldname": "column_break_faig",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "market_segment",
-   "fieldtype": "Select",
-   "in_standard_filter": 1,
-   "label": "Market Segment",
-   "options": "Lower Income\nMedium Income\nHigh Income"
+   "options": "\nAccountancy and Finance\nAgribusiness\nAutomotive\nBusiness Support & Supplies\nConsultancy\nConstruction & Contractors\nEducation\nFood & Hospitality\nHealth Services\nHome & Garden\nInformation Communication Technology\nLegal & Financial\nManufacturing\nWholesale & Distribution\nMedia House\nMerchants\nMiscellaneous\nPersonal Care & Services\nPower, Energy & Minerals\nPublic Service & Government\nReal Estate\nTrading\nProfessionals Association\nTransport & Logistics\nTravel and Transportation"
   },
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address",
+   "label": "Office Email",
    "options": "Email"
   },
   {
    "fieldname": "mobile_no",
    "fieldtype": "Data",
-   "label": "Mobile No",
+   "label": "Office Mobile No",
    "options": "Phone"
   },
   {
    "fieldname": "phone_no",
    "fieldtype": "Data",
-   "label": "Phone No",
+   "label": "Office Phone No",
    "options": "Phone"
   },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Full Name",
-   "read_only": 1
+   "label": "Full Name"
   },
   {
    "default": "__user",
@@ -202,7 +192,8 @@
    "fieldname": "lead_email",
    "fieldtype": "Data",
    "label": "Email Address",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_vnvt",
@@ -212,7 +203,8 @@
    "fieldname": "lead_mobile",
    "fieldtype": "Data",
    "label": "Mobile No",
-   "options": "Phone"
+   "options": "Phone",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ndlf",
@@ -222,7 +214,8 @@
    "fieldname": "lead_phone",
    "fieldtype": "Data",
    "label": "Phone No",
-   "options": "Phone"
+   "options": "Phone",
+   "reqd": 1
   },
   {
    "fieldname": "middle_name",
@@ -248,9 +241,10 @@
   {
    "fetch_from": "city.country",
    "fieldname": "country",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "Country"
+   "label": "Country",
+   "options": "Country"
   },
   {
    "fieldname": "column_break_lrzc",
@@ -266,12 +260,35 @@
    "fieldname": "address",
    "fieldtype": "Data",
    "label": "Address"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Lead Notes"
+  },
+  {
+   "fieldname": "column_break_tchq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vwlu",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-24 12:45:29.989849",
+ "modified": "2025-08-22 13:50:55.614037",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Lead",

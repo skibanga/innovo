@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"uDz8q-zxMD\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Accounting</span>\",\"col\":12}},{\"id\":\"U3RgC7ixdU\",\"type\":\"card\",\"data\":{\"card_name\":\"Account Transactions\",\"col\":4}}]",
+ "content": "[{\"id\":\"uDz8q-zxMD\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Accounting</span>\",\"col\":12}},{\"id\":\"t8C0dWamXp\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"USD Cash Balance\",\"col\":4}},{\"id\":\"J0YtES_xOS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cash TZS Balance\",\"col\":4}},{\"id\":\"pXD4Qr2SPV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Mobile Balance\",\"col\":4}},{\"id\":\"oNzl7WzWPK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RH6Xd1VUmL\",\"type\":\"card\",\"data\":{\"card_name\":\"Accounts\",\"col\":4}},{\"id\":\"U3RgC7ixdU\",\"type\":\"card\",\"data\":{\"card_name\":\"Account Transactions\",\"col\":4}}]",
  "creation": "2025-07-21 15:55:10.950405",
  "custom_blocks": [],
  "docstatus": 0,
@@ -31,13 +31,45 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accounts",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accounts",
+   "link_count": 0,
+   "link_to": "Accounts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-07-21 23:49:11.058855",
+ "modified": "2025-08-04 15:30:35.312459",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Accounting",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Mobile Balance",
+   "number_card_name": "Mobile Balance"
+  },
+  {
+   "label": "USD Cash Balance",
+   "number_card_name": "Cash USD Balance"
+  },
+  {
+   "label": "Cash TZS Balance",
+   "number_card_name": "Cash Balance"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,

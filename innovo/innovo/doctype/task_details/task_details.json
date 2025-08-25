@@ -12,7 +12,8 @@
   "expected_to_start",
   "expected_to_end",
   "column_break_uxrx",
-  "description"
+  "description",
+  "status"
  ],
  "fields": [
   {
@@ -65,14 +66,21 @@
   {
    "fieldname": "porject_task_details_section",
    "fieldtype": "Section Break",
-   "label": "Porject task Details"
+   "label": "Project task Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nWorking\nPending Review\nOverdue\nCompleted\nCancelled"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-28 12:15:47.449215",
+ "modified": "2025-08-15 14:00:07.876133",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Task Details",

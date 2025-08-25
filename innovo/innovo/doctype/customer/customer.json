@@ -10,6 +10,7 @@
   "overview_section",
   "customer_name",
   "customer_group",
+  "customer_type",
   "customer_details",
   "column_break_tpbd",
   "data_rnhf",
@@ -27,7 +28,7 @@
   "email_address",
   "phone",
   "section_break_tphj",
-  "name1",
+  "contact_name",
   "email_id",
   "column_break_fsdx",
   "designation",
@@ -66,7 +67,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Industry",
-   "options": "Accounting\nAdvertising\nAerospace\nAgriculture\nAirline\nAutomotive\nBanking\nChemical\nComputer\nConsulting\nFood, Beverage & Tobacco\nEducation\nElectronics\nEnergy\nFinancial Services\nHealthcare\nLegal\nManufacturing\nReal Estate"
+   "options": "\nAccountancy and Finance\nAgribusiness\nAutomotive\nBusiness Support & Supplies\nConstruction & Contractors\nEducation\nFood & Hospitality\nHealth Services\nHome & Garden\nInformation Communication Technology\nLegal &Financial\nManufacturing, Wholesale, Distribution\nMedia House\nMerchant\nMiscellaneous\nPersonal Care & Services\nPower, Energy & Mineral\nPublic  Service & Government\nReal Estate\nTrade & Professional Association\nTransport & Logistic\nTravel and Transportation"
   },
   {
    "fieldname": "from_lead",
@@ -76,8 +77,9 @@
   },
   {
    "fieldname": "tax_category",
-   "fieldtype": "Data",
-   "label": "TAX Category"
+   "fieldtype": "Select",
+   "label": "TAX Category",
+   "options": "VAT Inclusive\nNon VAT"
   },
   {
    "fieldname": "tax_id",
@@ -153,11 +155,6 @@
    "label": "Contact Person Info"
   },
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
    "fieldname": "email_id",
    "fieldtype": "Data",
    "label": "Email ID",
@@ -186,12 +183,25 @@
    "fieldtype": "Select",
    "label": "Gender",
    "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Type",
+   "options": "Import\nExport\nTendering\nSourcing\nInnovo Insurance\nPrimeline Deals"
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Data",
+   "label": "Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-22 15:17:32.249727",
+ "modified": "2025-08-20 11:30:48.048126",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Customer",

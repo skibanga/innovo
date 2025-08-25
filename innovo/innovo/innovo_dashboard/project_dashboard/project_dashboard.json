@@ -1,7 +1,35 @@
 {
- "cards": [],
+ "cards": [
+  {
+   "card": "Completed Project-1"
+  },
+  {
+   "card": "On Progress Progress"
+  },
+  {
+   "card": "Open Available Projects"
+  },
+  {
+   "card": "Open Task"
+  },
+  {
+   "card": "Working Task"
+  },
+  {
+   "card": "Pending Review Task"
+  }
+ ],
  "charts": [
   {
+   "chart": "Chart as Per Project Lead",
+   "width": "Half"
+  },
+  {
+   "chart": "Project Progress Chart",
+   "width": "Half"
+  },
+  {
+   "chart": "Goals Per Division",
    "width": "Half"
   }
  ],
@@ -10,9 +38,9 @@
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 0,
+ "is_default": 1,
  "is_standard": 1,
- "modified": "2025-07-22 13:55:11.685682",
+ "modified": "2025-07-29 14:35:08.129679",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Project Dashboard",

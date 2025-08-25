@@ -11,7 +11,17 @@
   "goal_title",
   "business_unit",
   "category",
+  "category2",
+  "category3",
+  "category4",
+  "category5",
+  "category6",
+  "category7",
+  "category8",
+  "category9",
+  "category10",
   "goal_owner",
+  "owner_name",
   "column_break_pyrk",
   "priority",
   "status",
@@ -36,17 +46,17 @@
    "fieldname": "business_unit",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Business Unit",
-   "options": "Sale-SL\nOperation-OP\nProduct Development-PD",
+   "label": "Business Division",
+   "options": "Executive Division-EXE\nOperations-OP\nFinance & Accounting-FA\nSales & Marketing-SL\nHuman Resources-HR\nInformation Technology-IT\nResearch & Development-R&D\nLegal & Compliance-L&C\nCorporate Strategy & Business Development-C&B\nAdministrative & Support- AS",
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.business_unit == \"Executive Division-EXE\"",
    "fieldname": "category",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Category",
-   "options": "Company Growth\nBrand Awareness",
-   "reqd": 1
+   "label": "Sub Division",
+   "options": "Board of Directors"
   },
   {
    "fieldname": "goal_owner",
@@ -116,12 +126,82 @@
    "fieldname": "goal_overview_section",
    "fieldtype": "Section Break",
    "label": "Goal Overview"
+  },
+  {
+   "fetch_from": "goal_owner.full_name",
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Operations-OP\"",
+   "fieldname": "category2",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Production/ Manufacturing\nSupply Chain & Logistics\nFacilities Management\nQuality Assurance\nCustomer Service & Support"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Finance & Accounting-FA\"",
+   "fieldname": "category3",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Financial Planning & Analysis\nAccounts Payable/ Receivable\nTax & Compliance\nInternal Audit\nTreasury & Investment"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Sales & Marketing-SL\"",
+   "fieldname": "category4",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Sales Increase\nBusiness Development\nDigital Marketing\nBrand Management\nMarket Research & Public Relation"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Human Resources-HR\"",
+   "fieldname": "category5",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Recruitment & Talent Acquisition\nEmployee Relations\nCompensation & Benefits\nTraining & Development (L&D)\nDiversity, Equity & Inclusion (DEI)"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Information Technology-IT\"",
+   "fieldname": "category6",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "IT Support & Helpdesk\nSoftware Development\nCybersecurity\nData Analytics & Business Intelligence (BI)\nNetwork & Infrastructure"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Research & Development-R&D\"",
+   "fieldname": "category7",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Product Development\nEngineering\nPrototyping & Testing"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Legal & Compliance-L&C\"",
+   "fieldname": "category8",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Corporate Law\nRegulatory Compliance\nIntellectual Property (IP)\nRisk Management"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Corporate Strategy & Business Development-C&B\"",
+   "fieldname": "category9",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Mergers & Acquisitions (M&A)\nStrategic Partnerships\nMission & Vision Alignment"
+  },
+  {
+   "depends_on": "eval:doc.business_unit == \"Administrative & Support- AS\"",
+   "fieldname": "category10",
+   "fieldtype": "Select",
+   "label": "Sub Division",
+   "options": "Office Administration\nExecutive Assistants\nCorporate Social Responsibility (CSR)\nEthical Business Practices"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-25 01:28:23.781389",
+ "modified": "2025-08-07 15:57:48.511897",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Strategic Goal",

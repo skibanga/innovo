@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Vm0hOkZjfs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Projects</span>\",\"col\":12}},{\"id\":\"6jrjpIEvFh\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Project\",\"col\":4}},{\"id\":\"YvJTLx4qzo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Task\",\"col\":4}},{\"id\":\"VHDJIoJz9Z\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Important Strategic Goals\",\"col\":4}},{\"id\":\"E18k_AAzvO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Y2Ce8ZrbYh\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Tracker\",\"col\":4}},{\"id\":\"hc6JpLqVHi\",\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracker\",\"col\":4}},{\"id\":\"wxPvLXg3ny\",\"type\":\"card\",\"data\":{\"card_name\":\"Business Roadmap\",\"col\":4}},{\"id\":\"o3yBxvOdYk\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"Vm0hOkZjfs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Projects</span>\",\"col\":12}},{\"id\":\"6jrjpIEvFh\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Project\",\"col\":4}},{\"id\":\"YvJTLx4qzo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Task\",\"col\":4}},{\"id\":\"VHDJIoJz9Z\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Important Strategic Goals\",\"col\":4}},{\"id\":\"_9VA-af1OX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Dashboard\",\"col\":3}},{\"id\":\"E18k_AAzvO\",\"type\":\"spacer\",\"data\":{\"col\":9}},{\"id\":\"Y2Ce8ZrbYh\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Tracker\",\"col\":4}},{\"id\":\"hc6JpLqVHi\",\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracker\",\"col\":4}},{\"id\":\"wxPvLXg3ny\",\"type\":\"card\",\"data\":{\"card_name\":\"Business Roadmap\",\"col\":4}},{\"id\":\"o3yBxvOdYk\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Reports\",\"col\":4}},{\"id\":\"hhGoQLavPm\",\"type\":\"card\",\"data\":{\"card_name\":\"Appointment\",\"col\":4}},{\"id\":\"NkuU0O3slP\",\"type\":\"card\",\"data\":{\"card_name\":\"Business Tracking\",\"col\":4}}]",
  "creation": "2025-07-21 12:24:21.925399",
  "custom_blocks": [],
  "docstatus": 0,
@@ -74,36 +74,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Business Roadmap",
-   "link_count": 2,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "All Department/ Division",
-   "link_count": 0,
-   "link_to": "Divisions",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "All Goals",
-   "link_count": 0,
-   "link_to": "Strategic Goal",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports",
+   "label": "Project Reports",
    "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
@@ -138,9 +109,98 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "description": "This is the card that carries all the report on the business roadmap.",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Tracking",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Important On Progress Goals",
+   "link_count": 0,
+   "link_to": "Important On Progress",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Completed Goals",
+   "link_count": 0,
+   "link_to": "Comleted Goals",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Goals as per Priority",
+   "link_count": 0,
+   "link_to": "Strategic Goals Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "This will help on the appointment.",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Appointment",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Appointments",
+   "link_count": 0,
+   "link_to": "Appointment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Roadmap",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Business Goals",
+   "link_count": 0,
+   "link_to": "Strategic Goal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Reminder",
+   "link_count": 0,
+   "link_to": "Compliance Reminder",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-07-28 13:15:54.364760",
+ "modified": "2025-08-12 15:27:09.725966",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Projects",
@@ -164,6 +224,14 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 2.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Project Dashboard",
+   "link_to": "Project Dashboard",
+   "type": "Dashboard"
+  }
+ ],
  "title": "Projects"
 }

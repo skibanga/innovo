@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:Petty Cash-{month}-{petty_cash_account}-{YY}",
  "creation": "2025-07-21 12:07:48.245958",
@@ -15,7 +16,16 @@
   "opening_balance_amount",
   "section_break_rxgv",
   "table_zanr",
-  "amended_from"
+  "amended_from",
+  "section_break_elyk",
+  "total_amount_out",
+  "total_amount_in",
+  "column_break_hlzb",
+  "total_charges",
+  "new_balance",
+  "column_break_rvhg",
+  "total_expenses",
+  "balance_amount"
  ],
  "fields": [
   {
@@ -36,6 +46,7 @@
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -73,13 +84,61 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_elyk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount_out",
+   "fieldtype": "Float",
+   "label": "Total Amount OUT",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_hlzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_charges",
+   "fieldtype": "Float",
+   "label": "Total Charges",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_rvhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Float",
+   "label": "Total Expenses",
+   "precision": "2"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Float",
+   "label": "Balance Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_amount_in",
+   "fieldtype": "Float",
+   "label": "Total Amount IN"
+  },
+  {
+   "fieldname": "new_balance",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "New Balance",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-25 01:13:26.582466",
+ "modified": "2025-08-14 10:14:28.214302",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Cash Disbursement",

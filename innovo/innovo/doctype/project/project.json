@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-07-21 11:41:23.702595",
@@ -39,7 +40,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Category",
-   "options": "Import\nExport\nTendering\nSourcing",
+   "options": "Import\nExport\nTendering\nSourcing\nInnovo Insurance\nPrimeline Deals",
    "reqd": 1
   },
   {
@@ -124,7 +125,8 @@
    "fieldname": "task",
    "fieldtype": "Table",
    "label": "Task",
-   "options": "Task Details"
+   "options": "Task Details",
+   "read_only": 1
   },
   {
    "fieldname": "project_task_tab",
@@ -178,7 +180,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-28 13:56:14.495260",
+ "modified": "2025-08-15 00:54:55.891924",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Project",
@@ -199,6 +201,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "search_fields": "project_title",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

@@ -9,11 +9,20 @@
  "field_order": [
   "overview_section",
   "prospect_name",
-  "location",
   "customer_group",
+  "location",
+  "country",
   "column_break_ctxy",
   "industry",
-  "market_segment",
+  "prospect_type",
+  "status",
+  "from_lead",
+  "section_break_hhni",
+  "office_mail",
+  "column_break_lkgn",
+  "mobile_no",
+  "column_break_mgce",
+  "phone_no",
   "contact_info_section",
   "contact_name",
   "website",
@@ -21,7 +30,9 @@
   "email",
   "mobile",
   "column_break_tepw",
-  "phone"
+  "phone",
+  "notes_section",
+  "notes"
  ],
  "fields": [
   {
@@ -33,10 +44,11 @@
   },
   {
    "fieldname": "location",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Location"
+   "label": "Location",
+   "options": "Region"
   },
   {
    "fieldname": "column_break_ctxy",
@@ -47,7 +59,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Industry",
-   "options": "Accounting\nAdvertising\nAerospace\nAgriculture\nAirline\nAutomotive\nBanking\nChemical\nConsulting\nCosmetics\nConsumer Product\nFood, Beverage & Tobacco\nEducation\nElectronics\nEnergy\nFinancial Services\nHealth Care\nLegal\nManufacturing\nReal Estate\nRetail & Wholesale"
+   "options": "\nAccountancy and Finance\nAgribusiness\nAutomotive\nBusiness Support & Supplies\nConstruction & Contractors\nEducation\nFood & Hospitality\nHealth Services\nHome & Garden\nInformation Communication Technology\nLegal &Financial\nManufacturing, Wholesale, Distribution\nMedia House\nMerchant\nMiscellaneous\nPersonal Care & Services\nPower, Energy & Mineral\nPublic  Service & Government\nReal Estate\nTrade & Professional Association\nTransport & Logistic\nTravel and Transportation"
   },
   {
    "fieldname": "customer_group",
@@ -64,11 +76,12 @@
   {
    "fieldname": "contact_info_section",
    "fieldtype": "Section Break",
-   "label": "Contact info"
+   "label": "Contact Person info"
   },
   {
    "fieldname": "contact_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Contact name",
    "reqd": 1
   },
@@ -86,6 +99,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Email",
+   "options": "Email",
    "reqd": 1
   },
   {
@@ -97,6 +111,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Phone",
+   "options": "Phone",
    "reqd": 1
   },
   {
@@ -105,17 +120,79 @@
    "label": "Mobile "
   },
   {
-   "fieldname": "market_segment",
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Prospect Notes"
+  },
+  {
+   "default": "Prospect",
+   "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Market segment",
-   "options": "Low Income\nMedium Income\nHigh Income"
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Prospect\nCustomer"
+  },
+  {
+   "fieldname": "prospect_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Prospect Type",
+   "options": "Import\nExport\nTendering\nSourcing\nInnovo Insurance\nPrimeline Deals"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "from_lead",
+   "fieldtype": "Link",
+   "label": "From Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "section_break_hhni",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "office_mail",
+   "fieldtype": "Data",
+   "label": "Office Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_lkgn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Office Mobile",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_mgce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Office Phone",
+   "options": "Phone"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-24 13:18:03.431833",
+ "modified": "2025-08-20 11:28:53.272353",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Prospect",
@@ -140,16 +217,12 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Purple",
-   "title": "Low Income"
-  },
-  {
-   "color": "Orange",
-   "title": "Medium Income"
+   "color": "Blue",
+   "title": "Prospect"
   },
   {
    "color": "Green",
-   "title": "High Income"
+   "title": "Customer"
   }
  ],
  "track_changes": 1,

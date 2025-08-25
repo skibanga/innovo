@@ -1,0 +1,39 @@
+{
+ "based_on": "",
+ "chart_name": "Project Progress Chart",
+ "chart_type": "Report",
+ "creation": "2025-07-29 13:46:48.192750",
+ "currency": "",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-07-29 13:46:59.513590",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Project Progress Chart",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "report_name": "On Progress Projects",
+ "roles": [],
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "x_field": "project_title",
+ "y_axis": [
+  {
+   "color": "#377cbd",
+   "y_field": "project_progress"
+  }
+ ]
+}

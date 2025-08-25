@@ -65,6 +65,7 @@ class Task(Document):
                         "expected_to_start": self.expected_start_date,
                         "expected_to_end": self.expected_end_date,
                         "description": self.task_description or self.subject,
+                        "status": self.status,
                     },
                 )
 

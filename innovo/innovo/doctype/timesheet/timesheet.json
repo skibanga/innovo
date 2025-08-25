@@ -3,21 +3,25 @@
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-07-21 12:32:23.808869",
+ "default_view": "List",
+ "description": "This will store what activities are to be done for a particular Task.",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "overview_section",
   "naming_series",
   "project",
-  "customer",
-  "currency",
+  "project_title",
+  "task",
   "column_break_pnjm",
   "status",
   "employee_details",
-  "activity_type",
+  "employee_name",
   "section_break_ycjc",
   "time_logs",
   "section_break_xqhp",
-  "notes"
+  "notes",
+  "amended_from"
  ],
  "fields": [
   {
@@ -29,47 +33,35 @@
    "reqd": 1
   },
   {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "label": "Customer",
-   "options": "Customer"
-  },
-  {
-   "fieldname": "currency",
-   "fieldtype": "Data",
-   "label": "Currency"
-  },
-  {
    "fieldname": "column_break_pnjm",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Draft\nSubmitted\nBilled\nPaysli\nCompleted"
+   "options": "Draft\nSubmitted\nCompleted",
+   "reqd": 1
   },
   {
    "fieldname": "employee_details",
-   "fieldtype": "Data",
-   "label": "Employee Details"
-  },
-  {
-   "fieldname": "activity_type",
-   "fieldtype": "Data",
-   "label": "Activity Type"
+   "fieldtype": "Link",
+   "label": "Employee Details",
+   "options": "User"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "options": "TS-.YYYY.-",
    "reqd": 1
   },
   {
    "fieldname": "section_break_xqhp",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Descriptions"
   },
   {
    "fieldname": "notes",
@@ -78,7 +70,8 @@
   },
   {
    "fieldname": "section_break_ycjc",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Task Activities"
   },
   {
    "fieldname": "time_logs",
@@ -86,12 +79,51 @@
    "label": "Time Sheets",
    "options": "Timesheet Details",
    "reqd": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task to Accomplish",
+   "options": "Task",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Timesheet",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "project.project_title",
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_details.full_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2025-07-22 15:40:46.847565",
+ "modified": "2025-08-04 16:20:49.651664",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Timesheet",

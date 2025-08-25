@@ -10,6 +10,7 @@
   "naming_series",
   "quotation_to",
   "lead",
+  "lead_company",
   "prospect",
   "customer",
   "column_break_xevu",
@@ -23,6 +24,8 @@
   "column_break_wezp",
   "column_break_xnfs",
   "total_amount",
+  "vat_amount",
+  "total",
   "section_break_cdwg",
   "bank_account",
   "account_name",
@@ -92,7 +95,8 @@
   {
    "fieldname": "total_quantity",
    "fieldtype": "Float",
-   "label": "Total Quantity"
+   "label": "Total Quantity",
+   "precision": "2"
   },
   {
    "fieldname": "column_break_wezp",
@@ -105,7 +109,8 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Float",
-   "label": "Total Amount"
+   "label": "Total Amount",
+   "precision": "2"
   },
   {
    "fieldname": "quotation_overview_section",
@@ -183,13 +188,32 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Float",
+   "label": "VAT Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "lead.company_name",
+   "fieldname": "lead_company",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-22 12:15:59.889720",
+ "modified": "2025-07-29 13:21:07.196620",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Quotation",

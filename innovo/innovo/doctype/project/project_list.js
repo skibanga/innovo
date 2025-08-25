@@ -56,17 +56,17 @@ frappe.listview_settings['Project'] = {
 
         progress_rate: function (value) {
             if (value == null || value === '') return '';
-            
+
             // Format progress as percentage with visual indicator
             const percentage = parseFloat(value) || 0;
             let color = 'blue';
-            
+
             if (percentage >= 100) color = 'green';
             else if (percentage >= 75) color = 'light-blue';
             else if (percentage >= 50) color = 'orange';
             else if (percentage >= 25) color = 'yellow';
             else color = 'red';
-            
+
             return `<span class="indicator-pill ${color}">${percentage.toFixed(0)}%</span>`;
         },
 
@@ -75,8 +75,8 @@ frappe.listview_settings['Project'] = {
 
             // Add client info if available
             let display = value;
-            if (doc.client) {
-                display += ` <small class="text-muted">(${doc.client})</small>`;
+            if (doc.progress_rate1) {
+                display += `(${doc.progress_rate1})`;
             }
 
             return display;

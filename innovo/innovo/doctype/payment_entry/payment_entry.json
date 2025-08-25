@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-06 13:25:57.140464",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "series",
+  "customer",
+  "paid_amount",
+  "column_break_wqxm",
+  "posting_date",
+  "mode_of_payment",
+  "section_break_lwvf",
+  "cheque_reference",
+  "column_break_hhjw",
+  "cheque_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "ACC-PAY-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_wqxm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode of Payment",
+   "options": "Bank Draft\nCash\nCheque\nCredit card\nWire Transfer"
+  },
+  {
+   "fieldname": "section_break_lwvf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cheque_reference",
+   "fieldtype": "Data",
+   "label": "Cheque/ Reference No."
+  },
+  {
+   "fieldname": "column_break_hhjw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cheque_date",
+   "fieldtype": "Date",
+   "label": "Cheque/ Reference Date"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-06 14:14:34.160715",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Payment Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

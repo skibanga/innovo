@@ -16,12 +16,14 @@
   "column_break_izsu",
   "order_status",
   "section_break_icbb",
-  "item_details",
+  "product",
   "section_break_mrdx",
   "total_quantity",
   "column_break_kscw",
   "column_break_xham",
-  "total_amont",
+  "total_amount",
+  "vat_amount",
+  "total",
   "bank_details_section",
   "account_number",
   "account_name",
@@ -85,12 +87,6 @@
    "label": "Order Item Details"
   },
   {
-   "fieldname": "item_details",
-   "fieldtype": "Table",
-   "label": "Item Details",
-   "options": "Item Details Table"
-  },
-  {
    "fieldname": "section_break_mrdx",
    "fieldtype": "Section Break"
   },
@@ -106,11 +102,6 @@
   {
    "fieldname": "column_break_xham",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_amont",
-   "fieldtype": "Float",
-   "label": "Total Amont"
   },
   {
    "fieldname": "bank_details_section",
@@ -177,13 +168,36 @@
    "label": "Order Status",
    "options": "Draft\nOn Hold\nTo Deliver\nTo Bill\nCompleted",
    "reqd": 1
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Item Details",
+   "options": "Item Details Table"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Float",
+   "label": "VAT Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amont"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-21 14:02:03.138958",
+ "modified": "2025-08-05 19:21:31.429713",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Sales Order",

@@ -144,7 +144,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Sales Cycle",
-   "link_count": 3,
+   "link_count": 4,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -178,9 +178,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Delivery Note",
+   "link_count": 0,
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-07-22 13:19:45.315927",
+ "modified": "2025-08-06 13:23:13.505146",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "CRM",

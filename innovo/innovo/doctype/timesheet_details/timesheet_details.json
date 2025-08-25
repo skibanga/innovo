@@ -6,34 +6,27 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "details_section",
   "activity_type",
-  "date_lxpl",
+  "from_date",
   "to_time",
-  "hrs",
-  "column_break_tomw",
+  "column_break_dcsq",
   "project",
-  "is_billable"
+  "hrs",
+  "status"
  ],
  "fields": [
   {
    "fieldname": "activity_type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Activity Type"
-  },
-  {
-   "fieldname": "date_lxpl",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "From Time"
-  },
-  {
-   "fieldname": "column_break_tomw",
-   "fieldtype": "Column Break"
+   "label": "Activity Type",
+   "reqd": 1
   },
   {
    "fieldname": "to_time",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "To Time"
   },
   {
@@ -44,24 +37,38 @@
    "options": "Project"
   },
   {
-   "default": "0",
-   "fieldname": "is_billable",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Is Billable"
-  },
-  {
    "fieldname": "hrs",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Hrs"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_dcsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "From Time"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nOn Progress\nCompleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-22 15:43:37.053563",
+ "modified": "2025-08-01 22:20:49.414571",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Timesheet Details",

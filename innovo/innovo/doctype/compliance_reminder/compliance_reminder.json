@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:compliance_name",
+ "creation": "2025-08-01 17:36:10.729421",
+ "description": "This is the table that will be tracking and reminding on the compliance issues.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "overview_section",
+  "compliance_name",
+  "vendor",
+  "column_break_hlbu",
+  "amount",
+  "payment",
+  "column_break_bhpy",
+  "type",
+  "section_break_mree",
+  "due_date",
+  "column_break_rgfg",
+  "remind_before",
+  "column_break_wzem"
+ ],
+ "fields": [
+  {
+   "fieldname": "compliance_name",
+   "fieldtype": "Data",
+   "label": "Compliance Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vendor"
+  },
+  {
+   "fieldname": "column_break_hlbu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_standard_filter": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment",
+   "options": "Manual\nAutomatic"
+  },
+  {
+   "fieldname": "column_break_bhpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "section_break_mree",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Datetime",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "column_break_rgfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remind_before",
+   "fieldtype": "Int",
+   "label": "Remind Me before X Day Before"
+  },
+  {
+   "fieldname": "column_break_wzem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-11 15:05:29.768009",
+ "modified_by": "Administrator",
+ "module": "Innovo",
+ "name": "Compliance Reminder",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
