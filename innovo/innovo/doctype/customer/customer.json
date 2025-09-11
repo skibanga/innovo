@@ -50,7 +50,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Customer Group",
-   "options": "Commercial\nGovernment\nUn Agencies"
+   "options": "Commercial\nGovernment\nUN Agencies\nNGO's"
   },
   {
    "fieldname": "customer_details",
@@ -201,7 +201,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-20 11:30:48.048126",
+ "modified": "2025-09-11 12:30:12.301428",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Customer",
