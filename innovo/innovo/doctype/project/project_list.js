@@ -44,8 +44,9 @@ frappe.listview_settings['Project'] = {
             const category_colors = {
                 "Import": "blue",      // Import operations - blue (calm, professional)
                 "Export": "green",     // Export operations - green (success, growth)
-                "Tendering": "orange", // Tendering process - orange (attention, active)
-                "Sourcing": "purple"   // Sourcing activities - purple (strategic, planning)
+                "Tendering": "purple", // Tendering process - purple (attention, active)
+                "Sourcing": "pink", // Sourcing activities - pink (strategic, planning)
+				"Innovo Insurance": "yellow"   // Sourcing activities - yellow (strategic, planning)
             };
 
             const color = category_colors[value] || 'grey';

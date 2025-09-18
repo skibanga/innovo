@@ -1,7 +1,7 @@
 {
  "aggregate_function_based_on": "",
  "background_color": "#7af08c",
- "color": "#576fd9",
+ "color": "#000000",
  "creation": "2025-07-22 12:00:00.379195",
  "currency": "TZS",
  "docstatus": 0,
@@ -14,7 +14,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Customer This Month",
- "modified": "2025-08-01 18:00:11.008661",
+ "modified": "2025-09-12 15:25:24.069324",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Customer This Month",

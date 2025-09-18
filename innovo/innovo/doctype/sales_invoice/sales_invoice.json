@@ -43,7 +43,18 @@
   "section_break_noiw",
   "validity_of_invoice",
   "column_break_bnek",
-  "prepared_by"
+  "prepared_by",
+  "description_tab",
+  "item_description_section",
+  "origin",
+  "color",
+  "particle_size",
+  "extraneous_matter",
+  "column_break_ytlf",
+  "ash",
+  "acid_insoluble_ash",
+  "moisture",
+  "volatile_oil"
  ],
  "fields": [
   {
@@ -276,13 +287,67 @@
    "fieldname": "prepared_by",
    "fieldtype": "Data",
    "label": "Prepared By"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "item_description_section",
+   "fieldtype": "Section Break",
+   "label": "Item Description"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "label": "Origin"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "particle_size",
+   "fieldtype": "Data",
+   "label": "Particle Size"
+  },
+  {
+   "fieldname": "extraneous_matter",
+   "fieldtype": "Data",
+   "label": "Extraneous Matter"
+  },
+  {
+   "fieldname": "column_break_ytlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ash",
+   "fieldtype": "Data",
+   "label": "Ash"
+  },
+  {
+   "fieldname": "acid_insoluble_ash",
+   "fieldtype": "Data",
+   "label": "Acid Insoluble Ash"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "label": "Moisture"
+  },
+  {
+   "fieldname": "volatile_oil",
+   "fieldtype": "Data",
+   "label": "Volatile Oil"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-24 14:10:47.111301",
+ "modified": "2025-09-17 17:35:06.566535",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Sales Invoice",

@@ -1,43 +1,55 @@
+// Copyright (c) 2025, Arnold Simony and contributors
+// For license information, please see license.txt
+
 frappe.listview_settings['Customer'] = {
-    add_fields: [
-        "project",
-        "status",
-        "priority",
-        "expected_start_date",
-        "expected_end_date",
-        "subject",
-        "task_for"
-    ],
+	add_fields: [
+		"customer_name",
+		"customer_group",
+		"customer_type",
+		"industry"
 
+	],
 
-    formatters: {
-        priority: function (value) {
-            if (!value) return '';
+	filters: [["customer_status", "in", "Active, Potential"]],
 
-            // Use Frappe's standard indicator colors
-            const customer_group_colors = {
-                "Commercial": "red",
-                "Government": "orange",
-                "Urgent": "yellow",
-                "Less Urgent": "blue"
-            };
+	onload: function (listview) {
+		// Add custom buttons for bulk operations
+		listview.page.add_menu_item(__("Set as Active"), function () {
+			listview.call_for_selected_items("innovo.api.set_multiple_customer_status", {
+				customer_status: "Active"
+			});
+		});
 
-            const color = customer_group_colors[value] || 'grey';
+		listview.page.add_menu_item(__("Set as Inactive"), function () {
+			listview.call_for_selected_items("innovo.api.set_multiple_customer_status", {
+				customer_status: "Inactive"
+			});
+		});
 
-            // Use Frappe's built-in indicator-pill classes
-            return `<span class="indicator-pill ${color}">${__(value)}</span>`;
-        },
+		listview.page.add_menu_item(__("Set as Potential"), function () {
+			listview.call_for_selected_items("innovo.api.set_multiple_customer_status", {
+				customer_status: "Potential"
+			});
+		});
+	},
 
-        subject: function (value, _field, doc) {
-            if (!value) return '';
+	formatters: {
+		customer_type: function (value) {
+			if (!value) return '';
 
-            // Add project info if available
-            let display = value;
-            if (doc.customer) {
-                display += ` <small class="text-muted">(${doc.project})</small>`;
-            }
+			// Use Frappe's standard indicator colors for customer types
+			const type_colors = {
+				"Import": "blue",      // Import operations - blue (calm, professional)
+				"Export": "green",     // Export operations - green (success, growth)
+				"Tendering": "purple", // Tendering process - purple (attention, active)
+				"Sourcing": "pink", // Sourcing activities - pink (strategic, planning)
+				"Innovo Insurance": "yellow"   // Sourcing activities - yellow (strategic, planning)
+			};
+			const color = type_colors[value] || 'grey';
 
-            return display;
-        }
-    }
+			// Use Frappe's built-in indicator-pill classes
+			return `<span class="indicator-pill ${color}">${__(value)}</span>`;
+		}
+	}
+    
 };

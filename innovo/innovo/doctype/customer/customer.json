@@ -18,6 +18,7 @@
   "tax_category",
   "tax_id",
   "billing_currency",
+  "status",
   "location_and_contact_info_section",
   "address_line_1",
   "address_line_2",
@@ -50,7 +51,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Customer Group",
-   "options": "Commercial\nGovernment\nUN Agencies\nNGO's"
+   "options": "Commercial\nGovernment\nUN Agency\nNGO's"
   },
   {
    "fieldname": "customer_details",
@@ -120,7 +121,6 @@
    "fieldname": "region",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Region",
    "options": "Region"
   },
@@ -138,14 +138,12 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Email Address",
    "options": "Email"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Phone",
    "options": "Phone"
   },
@@ -196,12 +194,18 @@
    "fieldname": "contact_name",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nPotential\nInactive"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-11 12:30:12.301428",
+ "modified": "2025-09-15 15:17:07.469918",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Customer",
@@ -224,7 +228,20 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Inactive"
+  },
+  {
+   "color": "Purple",
+   "title": "Potential"
+  }
+ ],
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

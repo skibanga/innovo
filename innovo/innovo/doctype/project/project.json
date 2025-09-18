@@ -125,8 +125,7 @@
    "fieldname": "task",
    "fieldtype": "Table",
    "label": "Task",
-   "options": "Task Details",
-   "read_only": 1
+   "options": "Task Details"
   },
   {
    "fieldname": "project_task_tab",
@@ -180,7 +179,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-11 12:24:49.667314",
+ "modified": "2025-09-16 12:44:57.383403",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Project",
@@ -216,6 +215,10 @@
   {
    "color": "Green",
    "title": "Completed"
+  },
+  {
+   "color": "Gray",
+   "title": "Terminated"
   }
  ],
  "title_field": "project_title",

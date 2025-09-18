@@ -97,7 +97,6 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Email",
    "options": "Email",
    "reqd": 1
@@ -109,7 +108,6 @@
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Phone",
    "options": "Phone",
    "reqd": 1
@@ -192,7 +190,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-25 22:14:37.787553",
+ "modified": "2025-09-12 16:15:26.540088",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Prospect",

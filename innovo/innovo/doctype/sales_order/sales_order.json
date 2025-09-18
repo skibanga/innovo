@@ -10,11 +10,16 @@
   "naming_series",
   "customer",
   "customer_purchase_order",
+  "vrn",
+  "customer_address",
   "column_break_zkyv",
   "date",
   "delivery_date",
   "column_break_izsu",
   "order_status",
+  "customer_email",
+  "customer_phone",
+  "tin",
   "section_break_icbb",
   "product",
   "section_break_mrdx",
@@ -29,9 +34,25 @@
   "account_name",
   "bank_name",
   "currency",
+  "swiftcode",
   "column_break_hwrt",
   "notes",
-  "amended_from"
+  "amended_from",
+  "section_break_zyhw",
+  "validity_of_invoice",
+  "column_break_awck",
+  "prepared_by",
+  "sales_item_description_tab",
+  "description_of_the_sold_item_section",
+  "origin",
+  "particle_size",
+  "ash",
+  "moisture",
+  "column_break_stvu",
+  "color",
+  "extraneous_matter",
+  "acid_insoluble_ash",
+  "volatile_oil"
  ],
  "fields": [
   {
@@ -191,13 +212,123 @@
    "fieldname": "total_amount",
    "fieldtype": "Float",
    "label": "Total Amont"
+  },
+  {
+   "fieldname": "vrn",
+   "fieldtype": "Data",
+   "label": "VRN"
+  },
+  {
+   "fetch_from": "customer.email_address",
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email"
+  },
+  {
+   "fetch_from": "customer.phone",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tin",
+   "fieldtype": "Data",
+   "label": "TIN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.address_line_1",
+   "fieldname": "customer_address",
+   "fieldtype": "Data",
+   "label": "Customer Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "account_number.swift_code",
+   "fieldname": "swiftcode",
+   "fieldtype": "Data",
+   "label": "SwitfCode",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zyhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "validity_of_invoice",
+   "fieldtype": "Date",
+   "label": "Validity of Invoice"
+  },
+  {
+   "fieldname": "column_break_awck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Data",
+   "label": "Prepared By"
+  },
+  {
+   "fieldname": "sales_item_description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Sales Item Description"
+  },
+  {
+   "fieldname": "description_of_the_sold_item_section",
+   "fieldtype": "Section Break",
+   "label": "Description of the Sold Item"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "label": "Origin"
+  },
+  {
+   "fieldname": "column_break_stvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "extraneous_matter",
+   "fieldtype": "Data",
+   "label": "Extraneous Matter"
+  },
+  {
+   "fieldname": "ash",
+   "fieldtype": "Data",
+   "label": "Ash"
+  },
+  {
+   "fieldname": "moisture",
+   "fieldtype": "Data",
+   "label": "Moisture"
+  },
+  {
+   "fieldname": "acid_insoluble_ash",
+   "fieldtype": "Data",
+   "label": "Acid Insoluble Ash"
+  },
+  {
+   "fieldname": "volatile_oil",
+   "fieldtype": "Data",
+   "label": "Volatile Oil"
+  },
+  {
+   "fieldname": "particle_size",
+   "fieldtype": "Data",
+   "label": "Particles Size"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-05 19:21:31.429713",
+ "modified": "2025-09-18 10:02:08.145028",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Sales Order",
