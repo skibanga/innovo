@@ -75,6 +75,19 @@ class Task(Document):
                 frappe.msgprint(
                     f"Task '{self.subject}' has been added to project '{project_doc.project_title}'"
                 )
+            else:
+                # Update existing task in project's child table
+                existing_task.expected_to_start = self.expected_start_date
+                existing_task.expected_to_end = self.expected_end_date
+                existing_task.description = self.task_description or self.subject
+                existing_task.status = self.status
+
+                project_doc.flags.ignore_permissions = True
+                project_doc.save()
+
+                frappe.msgprint(
+                    f"Task '{self.subject}' has been updated in project '{project_doc.project_title}'"
+                )
 
         except Exception as e:
             frappe.log_error(
@@ -108,7 +121,54 @@ class Task(Document):
         if not self.project:
             return
 
+        # Update the task status in project's child table
+        self.sync_task_status_to_project()
+
+        # Update overall project completion status
         self.check_and_update_project_completion(self.project)
+
+    def sync_task_status_to_project(self):
+        """Synchronize task status to the corresponding row in project's child table"""
+        if not self.project:
+            return
+
+        try:
+            project_doc = frappe.get_doc("Project", self.project)
+
+            # Find the corresponding task in project's child table and update its status
+            task_updated = False
+            for task_detail in project_doc.task:
+                if task_detail.task == self.name:
+                    # Update the status in child table to match the task's current status
+                    old_status = task_detail.status
+                    task_detail.status = self.status
+
+                    # Also update other relevant fields if they've changed
+                    if self.expected_start_date:
+                        task_detail.expected_to_start = self.expected_start_date
+                    if self.expected_end_date:
+                        task_detail.expected_to_end = self.expected_end_date
+                    if self.task_description:
+                        task_detail.description = self.task_description
+
+                    task_updated = True
+
+                    break
+
+            if task_updated:
+                project_doc.flags.ignore_permissions = True
+                project_doc.save()
+
+                frappe.msgprint(
+                    f"Task status updated in project '{project_doc.project_title}': {self.status}",
+                    alert=True
+                )
+
+        except Exception as e:
+            frappe.log_error(
+                f"Error syncing task status to project: {str(e)}",
+                "Task Status Sync Error"
+            )
 
     def check_and_update_project_completion(self, project_name):
         """Check if all project tasks are completed and update project status"""
