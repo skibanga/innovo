@@ -26,6 +26,7 @@
   "product",
   "section_break_hsci",
   "total_quantity",
+  "word_amount",
   "column_break_tned",
   "column_break_exmm",
   "total_amount",
@@ -341,13 +342,18 @@
    "fieldname": "volatile_oil",
    "fieldtype": "Data",
    "label": "Volatile Oil"
+  },
+  {
+   "fieldname": "word_amount",
+   "fieldtype": "Small Text",
+   "label": "Amount in Words"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-17 17:35:06.566535",
+ "modified": "2025-09-23 17:06:07.775160",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Sales Invoice",

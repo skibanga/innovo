@@ -1,6 +1,6 @@
 # Innovo API functions
 import frappe  # pyright: ignore[reportMissingImports]
-
+from frappe.desk.reportview import get_match_cond
 
 @frappe.whitelist()
 def add_task_to_project(task_name, project_name):
@@ -78,6 +78,7 @@ def get_project_tasks_summary(project_name):
                     "expected_to_start": task_detail.expected_to_start,
                     "expected_to_end": task_detail.expected_to_end,
                     "description": task_detail.description,
+                    "status": task_detail.status,
                 }
             )
 
@@ -158,3 +159,31 @@ def get_task_priority_stats():
     except Exception as e:
         frappe.log_error(f"Error in get_task_priority_stats: {str(e)}", "API Error")
         return {"success": False, "message": str(e)}
+
+
+@frappe.whitelist()
+@frappe.validate_and_sanitize_search_inputs
+def get_projects_desc(doctype, txt, searchfield, start, page_len, filters):
+    # Search text
+    params = {
+        "txt": f"%{txt}%",
+        "start": start or 0,
+        "page_len": page_len or 20,
+    }
+
+    # Respect user permissions for Project
+    perm_cond = get_match_cond("Project")
+
+    # Sort by last updated (newest first). Use "creation DESC" if you prefer.
+    return frappe.db.sql(
+        f"""
+        SELECT name, project_title
+        FROM `tabProject`
+        WHERE docstatus < 2
+          {perm_cond}
+          AND (name LIKE %(txt)s OR project_title LIKE %(txt)s)
+        ORDER BY modified DESC
+        LIMIT %(start)s, %(page_len)s
+        """,
+        params,
+    )

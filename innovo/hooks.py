@@ -138,6 +138,12 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
+#     "Appointment": {
+#         "validate": "innovo.doctype.appointment.appointment.validate",
+#     }
+# }
+
+# doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
