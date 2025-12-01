@@ -16,8 +16,27 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Account Transactions",
+   "label": "Accounts",
    "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Accounts",
+   "link_count": 0,
+   "link_to": "Accounts",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Account Transactions",
+   "link_count": 2,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -35,24 +54,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Accounts",
-   "link_count": 1,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Accounts",
+   "label": "Bank Disbursement",
    "link_count": 0,
-   "link_to": "Accounts",
+   "link_to": "Bank Disbursement",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2025-08-04 15:30:35.312459",
+ "modified": "2025-12-01 15:33:24.483712",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Accounting",

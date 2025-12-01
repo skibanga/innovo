@@ -20,6 +20,7 @@
   "end_datetime",
   "column_break_vlsx",
   "duration",
+  "reminder_alert",
   "status_section",
   "status",
   "column_break_jjzz",
@@ -124,12 +125,18 @@
    "label": "Appointment ID",
    "options": "APPNT-.MM.-.YYYY.-",
    "reqd": 1
+  },
+  {
+   "description": "When you want to be reminded.",
+   "fieldname": "reminder_alert",
+   "fieldtype": "Int",
+   "label": "Remind me X Min before"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-13 18:31:50.561737",
+ "modified": "2025-11-04 13:55:50.188025",
  "modified_by": "Administrator",
  "module": "Innovo",
  "name": "Appointment",
